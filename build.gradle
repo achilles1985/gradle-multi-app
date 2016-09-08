@@ -12,3 +12,10 @@ allprojects {
         testCompile group: 'junit', name: 'junit', version: '4.11'
     }
 }
+
+task singleTest(type: Test) {
+    filter {
+        includeTestsMatching 'com.service.FeedService'
+    }
+}
+
